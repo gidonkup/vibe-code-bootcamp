@@ -838,6 +838,16 @@ footer p + p { margin-top: 0.25rem; opacity: 0.45; font-size: 0.74rem; }
     <p class="section-lead rv" style="margin:0 auto 1.5rem;">
       15 select participants. Deeply personalized guidance. Real tools you'll use from day one.
     </p>
+    <div class="hero-countdown rv" id="reg-countdown" style="justify-content:center;margin-bottom:1.2rem;">
+      <div class="countdown-block"><div class="countdown-num" id="cd2-days">--</div><div class="countdown-label">Days</div></div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-block"><div class="countdown-num" id="cd2-hours">--</div><div class="countdown-label">Hours</div></div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-block"><div class="countdown-num" id="cd2-mins">--</div><div class="countdown-label">Mins</div></div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-block"><div class="countdown-num" id="cd2-secs">--</div><div class="countdown-label">Secs</div></div>
+      <span class="countdown-suffix">until registration closes</span>
+    </div>
     <div class="deadline-banner rv">DEADLINE TO APPLY: TUESDAY, JULY 7TH</div>
     <div class="register-btns rv delay-1">
       <a href="https://forms.gle/sR65yocP3VWntMPW8" target="_blank" rel="noopener" class="btn btn-dark">
@@ -966,6 +976,14 @@ document.querySelectorAll('.rv').forEach(el => observer.observe(el));
     if (hrs)  hrs.textContent  = pad(h);
     if (mins) mins.textContent = pad(m);
     if (secs) secs.textContent = pad(s);
+    var d2 = document.getElementById('cd2-days');
+    var h2 = document.getElementById('cd2-hours');
+    var m2 = document.getElementById('cd2-mins');
+    var s2 = document.getElementById('cd2-secs');
+    if (d2) d2.textContent = pad(d);
+    if (h2) h2.textContent = pad(h);
+    if (m2) m2.textContent = pad(m);
+    if (s2) s2.textContent = pad(s);
   }
   tick();
   setInterval(tick, 1000);
